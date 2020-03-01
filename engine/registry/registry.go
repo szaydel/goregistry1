@@ -2,8 +2,6 @@ package registry
 
 import (
 	"fmt"
-
-	// "github.com/szaydel/goregistry1/engine/module1"
 )
 type Module interface {
 	Identity() string
