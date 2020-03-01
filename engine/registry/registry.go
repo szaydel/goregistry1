@@ -11,7 +11,13 @@ type Registry struct {
 	Modules map[string]Module
 }
 
-var Default = Registry{}
+var Default Registry
+
+func init() {
+	Default = Registry{
+		Modules: make(map[string]Module),
+	}
+}
 
 func (r *Registry) Register(m Module) {
 	fmt.Printf("Registering %s\n", m.Identity())
